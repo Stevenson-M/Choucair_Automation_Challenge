@@ -5,6 +5,7 @@
 
 # Intellij
 .idea/
+.idea
 .gradle/
 *.iml
 *.iws
