@@ -25,9 +25,11 @@ public class CompleteRecruitment implements Task {
         actor.attemptsTo(
                 // Shortlist the candidate
                 Click.on(SHORTLIST_BUTTON),
+                WaitUntil.the(SHORTLIST_SAVE_BUTTON, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(SHORTLIST_SAVE_BUTTON),
 
                 // Schedule the interview
+                WaitUntil.the(SCHEDULE_INTERVIEW_BUTTON, isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(SCHEDULE_INTERVIEW_BUTTON),
 
                 // Enter interview details

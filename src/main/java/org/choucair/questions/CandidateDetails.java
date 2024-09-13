@@ -4,6 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.choucair.userInterfaces.DashboardPage;
 import org.choucair.userInterfaces.RecruitmentPage;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -22,6 +23,8 @@ public class CandidateDetails implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
+
+        WaitUntil.the(DashboardPage.RECRUITMENT_OPTION, isVisible()).forNoMoreThan(30).seconds().performAs(actor);
 
         actor.attemptsTo(WaitUntil.the(RecruitmentPage.EMPLOYEE_LIST, isVisible()).forNoMoreThan(30).seconds());
 
