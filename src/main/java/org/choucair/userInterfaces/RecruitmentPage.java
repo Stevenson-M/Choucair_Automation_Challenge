@@ -18,7 +18,7 @@ public class RecruitmentPage extends PageObject {
     public static final Target VACANCY_LIST = Target.the("list of vacancy")
             .locatedBy("//div[@class='oxd-select-text oxd-select-text--active']/div[@class='oxd-select-text--after']/i[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']");
     public static final Target VACANCY_OPTION = Target.the("vacancy option")
-            .located(By.xpath("/html/body/div[@id='app']/div[@class='oxd-layout orangehrm-upgrade-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container orangehrm-save-candidate-page']/div[@class='orangehrm-card-container']/form[@class='oxd-form']/div[@class='oxd-form-row'][2]/div[@class='oxd-grid-3 orangehrm-full-width-grid']/div[@class='oxd-grid-item oxd-grid-item--gutters']/div[@class='oxd-input-group oxd-input-field-bottom-space']/div[2]/div[@class='oxd-select-wrapper']/div[@class='oxd-select-dropdown --positon-bottom']/div[@class='oxd-select-option'][8]"));
+            .located(By.xpath("//div[contains(@class, 'oxd-select-option')]/span[text()='test']"));
     public static final Target EMAIL_INPUT = Target.the("email input field")
           .located(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[3]/div/div[1]/div/div[2]/input"));
     public static final Target NUMBER_INPUT = Target.the("phone input field")
